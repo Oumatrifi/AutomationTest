@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-04-11T13:55:19 CET" name="Default suite" finished-at="2023-04-11T13:58:17 CET" duration-ms="178685">
+    <groups>
+    </groups>
+    <test started-at="2023-04-11T13:55:19 CET" name="Default test" finished-at="2023-04-11T13:58:17 CET" duration-ms="178685">
+      <class name="tests.Offline_Control_Mode">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Offline_Control_Mode@41d477ed]" started-at="2023-04-11T13:55:19 CET" name="setup" finished-at="2023-04-11T13:55:35 CET" duration-ms="16506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Control_Mode@41d477ed]" started-at="2023-04-11T13:55:35 CET" name="Authentification" finished-at="2023-04-11T13:55:56 CET" duration-ms="20464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Authentification -->
+        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Control_Mode@41d477ed]" started-at="2023-04-11T13:55:56 CET" name="CreationSite" finished-at="2023-04-11T13:56:03 CET" duration-ms="6736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreationSite -->
+        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Control_Mode@41d477ed]" started-at="2023-04-11T13:56:03 CET" name="Creation_Area" finished-at="2023-04-11T13:56:20 CET" duration-ms="17541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Creation_Area -->
+        <test-method signature="add_Device_SceneAuto_ForOnce()[pri:0, instance:tests.Offline_Control_Mode@41d477ed]" started-at="2023-04-11T13:56:20 CET" name="add_Device_SceneAuto_ForOnce" finished-at="2023-04-11T13:58:17 CET" duration-ms="117382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- add_Device_SceneAuto_ForOnce -->
+      </class> <!-- tests.Offline_Control_Mode -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
