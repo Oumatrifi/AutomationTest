@@ -2,31 +2,20 @@ package tests;
 
 
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.Duration;
-import org.testng.annotations.*;
-
-
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-
-
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidStartScreenRecordingOptions;
 
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.LongPressOptions;
+import io.appium.java_client.touch.offset.ElementOption;
+import java.time.Duration;
+import java.util.Arrays;
 
-
-import java.util.Base64;
-
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 
 
 
@@ -113,7 +102,7 @@ public void CreationSite() {
      }
      @Test
   
-     public void add_Device_SceneAuto_ForOnce() throws InterruptedException {
+     public void add_Device_ControlAcc_SceneAuto_ForOnce() throws InterruptedException {
          
     	 WebElement b8= driver.findElement(By.xpath("//android.widget.FrameLayout[@content-desc=\"Espace\"]"));
  	    b8.click();
@@ -142,7 +131,7 @@ public void CreationSite() {
         Thread.sleep(4000);
         WebElement c0= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.Button"));
         c0.click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         WebElement o= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[2]"));
         o.click();
        
@@ -236,7 +225,7 @@ public void CreationSite() {
         Thread.sleep(3000);
         WebElement b2= driver.findElement(By.id("com.sofia.commendo:id/select_room"));
         b2.click(); 
-        
+        Thread.sleep(2000);
         WebElement b3= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.View"));
         b3.click(); 
         
@@ -280,7 +269,7 @@ public void CreationSite() {
           
           WebElement x8= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.Button"));
           x8.click();
-          
+          Thread.sleep(2000);
           WebElement x9= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView[2]"));
           x9.click();
          
@@ -305,7 +294,7 @@ public void CreationSite() {
           
         
           
-         
+         Thread.sleep(1000);
         
         
           
@@ -313,7 +302,67 @@ public void CreationSite() {
           WebElement x14= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.Button"));
           x14.click();
           
-          Thread.sleep(2000);
+          Thread.sleep(6000);
+          
+     
+    	 
+    	// Control device
+    	  
+    	 
+    	 WebElement z1= driver.findElement(By.id("com.sofia.commendo:id/area"));
+  	    z1.click();
+    	 Thread.sleep(2000);
+    	    WebElement b6= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.View"));
+    	    b6.click();
+    	    Thread.sleep(20000);
+    	//popup
+    	   // WebElement v1= driver.findElement(By.id("com.sofia.commendo:id/try_again"));
+    	    //v1.click();
+    	    
+    	    //click on the lampe1 
+    	  
+    	    WebElement b7= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView"));
+    	    b7.click();
+    	    Thread.sleep(2000);
+    	   // WebElement v3= driver.findElement(By.id("com.sofia.commendo:id/try_again"));
+    	    //v3.click();
+    	    
+    	    //WebElement b10= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView"));
+    	    //b10.click();
+    	   //WebElement v4= driver.findElement(By.id("com.sofia.commendo:id/try_again"));
+    	   //v4.click();
+    	    //lampe2
+    	    WebElement b0= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView"));
+    	    b0.click();
+    	    //retour
+    	    WebElement b9= driver.findElement(By.id("com.sofia.commendo:id/back"));
+    	    b9.click();
+    	    //click on accessoires
+    	    WebElement l3= driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Accessoires\"]"));
+    	    l3.click();
+    	    Thread.sleep(2000);
+    	    //lampes
+    	    WebElement l4= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[1]/android.view.ViewGroup[2]/android.widget.FrameLayout/android.view.ViewGroup"));
+    	    l4.click();
+    	    Thread.sleep(1000);
+    	    //stores
+    	    WebElement l5= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[1]/android.view.ViewGroup[3]/android.widget.FrameLayout/android.view.ViewGroup"));
+    	    l5.click();
+    	    Thread.sleep(1000);
+    	    //tous
+    	    WebElement l6= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView[1]/android.view.ViewGroup[1]/android.widget.FrameLayout/android.view.ViewGroup"));
+    	    l6.click();
+    	    //espaces
+    	    WebElement l7= driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc=\"Espaces\"]"));
+    	    l7.click();
+    	    Thread.sleep(2000);
+    	    //salle de reunion
+    	    WebElement l8= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.view.View"));
+    	    l8.click();
+    	    
+    	    Thread.sleep(2000);
+    	    
+    	 
       }
          
   
