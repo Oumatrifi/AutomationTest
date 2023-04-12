@@ -7,13 +7,17 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumBy;
-
+import io.appium.java_client.PerformsTouchActions;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
+
 import java.time.Duration;
 import java.util.Arrays;
 
+import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
 
@@ -100,7 +104,8 @@ public void CreationSite() {
     Thread.sleep(2000);
   
      }
-     @Test
+     @SuppressWarnings("deprecation")
+	@Test
   
      public void add_Device_ControlAcc_SceneAuto_ForOnce() throws InterruptedException {
          
@@ -361,9 +366,28 @@ public void CreationSite() {
     	    l8.click();
     	    
     	    Thread.sleep(2000);
-    	    
-    	 
-      }
+    	    //Ajouter aux favoris 
+    	    WebElement l10= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup"));
+    	
+    	    System.out.println(l10.getClass().getName());
+    	   
+    	    LongPressOptions longPressOptions = new LongPressOptions();
+    	    longPressOptions.withDuration(Duration.ofSeconds(2)); // Set the duration of the long press
+    	    longPressOptions.withElement(ElementOption.element(l10)); // Set the element to long press on
+    	    try {
+    	        new TouchAction((PerformsTouchActions) driver).longPress(longPressOptions).perform();
+    	    } catch (Exception e) {
+    	        e.printStackTrace();
+    	    }
+
+
+
+
+
+
+
+
+    	       }
          
   
    
