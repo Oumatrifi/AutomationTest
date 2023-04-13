@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-12T15:30:08 CET" name="Default suite" finished-at="2023-04-12T15:34:05 CET" duration-ms="237862">
+  <suite started-at="2023-04-13T13:47:49 CET" name="Default suite" finished-at="2023-04-13T13:52:32 CET" duration-ms="283360">
     <groups>
     </groups>
-    <test started-at="2023-04-12T15:30:08 CET" name="Default test" finished-at="2023-04-12T15:34:05 CET" duration-ms="237862">
+    <test started-at="2023-04-13T13:47:49 CET" name="Default test" finished-at="2023-04-13T13:52:32 CET" duration-ms="283360">
       <class name="tests.Offline_Control_Mode">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Offline_Control_Mode@5769e7ae]" started-at="2023-04-12T15:30:08 CET" name="setup" finished-at="2023-04-12T15:30:26 CET" duration-ms="18574" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Offline_Control_Mode@71e9a896]" started-at="2023-04-13T13:47:49 CET" name="setup" finished-at="2023-04-13T13:48:09 CET" duration-ms="20254" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Control_Mode@5769e7ae]" started-at="2023-04-12T15:30:26 CET" name="Authentification" finished-at="2023-04-12T15:30:47 CET" duration-ms="20385" status="PASS">
+        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Control_Mode@71e9a896]" started-at="2023-04-13T13:48:09 CET" name="Authentification" finished-at="2023-04-13T13:48:31 CET" duration-ms="21403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Authentification -->
-        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Control_Mode@5769e7ae]" started-at="2023-04-12T15:30:47 CET" name="CreationSite" finished-at="2023-04-12T15:30:52 CET" duration-ms="5875" status="PASS">
+        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Control_Mode@71e9a896]" started-at="2023-04-13T13:48:31 CET" name="CreationSite" finished-at="2023-04-13T13:48:37 CET" duration-ms="6181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreationSite -->
-        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Control_Mode@5769e7ae]" started-at="2023-04-12T15:30:52 CET" name="Creation_Area" finished-at="2023-04-12T15:31:10 CET" duration-ms="17536" status="PASS">
+        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Control_Mode@71e9a896]" started-at="2023-04-13T13:48:37 CET" name="Creation_Area" finished-at="2023-04-13T13:48:55 CET" duration-ms="17903" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Creation_Area -->
-        <test-method signature="add_Device_ControlAcc_SceneAuto_ForOnce()[pri:0, instance:tests.Offline_Control_Mode@5769e7ae]" started-at="2023-04-12T15:31:10 CET" name="add_Device_ControlAcc_SceneAuto_ForOnce" finished-at="2023-04-12T15:34:05 CET" duration-ms="175384" status="PASS">
+        <test-method signature="add_Device_ControlAcc_SceneAuto_ForOnce()[pri:0, instance:tests.Offline_Control_Mode@71e9a896]" started-at="2023-04-13T13:48:55 CET" name="add_Device_ControlAcc_SceneAuto_ForOnce" finished-at="2023-04-13T13:52:32 CET" duration-ms="217480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_Device_ControlAcc_SceneAuto_ForOnce -->
