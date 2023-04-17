@@ -56,11 +56,11 @@ public void CreationSite() {
     
     //choixdu wifi
     WebElement f = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText"));
-    f.sendKeys("TOPNET_B1D0");
+    f.sendKeys("SOFIA_STAGE_RDC");
   
    
     WebElement x = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.EditText"));
-    x.sendKeys("ylqcnui8qp");
+    x.sendKeys("P94@#2ASx!7wri%T");
     
     WebElement p = driver.findElement(By.xpath( "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.widget.Button"));
     p.click();
@@ -299,7 +299,7 @@ public void CreationSite() {
           
         
           
-         Thread.sleep(1000);
+         Thread.sleep(5000);
         
         
           
@@ -574,8 +574,87 @@ Thread.sleep(2000);
 WebElement c29= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.Button"));
 c29.click();
 Thread.sleep(2000);
+//edit scene auto for repeatBug
+WebElement v1= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"));
+	
+System.out.println(v1.getClass().getName());
+
+LongPressOptions longPressOptions3 = new LongPressOptions();
+longPressOptions3.withDuration(Duration.ofSeconds(2)); // Set the duration of the long press
+longPressOptions3.withElement(ElementOption.element(v1)); // Set the element to long press on
+try {
+    new TouchAction((PerformsTouchActions) driver).longPress(longPressOptions3).perform();
+} catch (Exception e) {
+    e.printStackTrace();
+}
+Thread.sleep(1000);
+WebElement v2= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"));
+v2.click();
+Thread.sleep(2000);
+WebElement v3= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button"));
+v3.click();
+
+WebElement v4= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup"));
+v4.click();
+
+Thread.sleep(2000);
+//cocher mercredi
+WebElement v5= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[3]/android.widget.ImageView"));
+v5.click();
+
+Thread.sleep(2000);
+
+int height1 = driver.manage().window().getSize().getHeight();
+int width1 = driver.manage().window().getSize().getWidth();
+
+// Calculate the start and end points for the swipe gesture
+int startX1 = width1 / 2;
+int startY1 = (int) (height1 * 0.8);
+int endY1 = (int) (height1 * 0.2);
+
+// Create a new TouchAction instance and perform the swipe gesture
+TouchAction action1 = new TouchAction(driver);
+action.press(PointOption.point(startX1, startY1))
+      .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // <-- use WaitOptions.waitOptions
+      .moveTo(PointOption.point(startX1, endY1))
+      .release()
+      .perform();
+
+WebElement v6= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button[2]"));
+c21.click();
+Thread.sleep(2000);
+WebElement v7= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button[2]"));
+v7.click();
+v7.clear();
+v7.sendKeys("5");
+driver.hideKeyboard();
+WebElement v8= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.Button"));
+v8.click();
+
+//flecheback
+Thread.sleep(2000);
+
+WebElement v9= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.ImageView[2]"));
+v9.click();
+
+WebElement v10= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"));
+
+System.out.println(v10.getClass().getName());
+
+LongPressOptions longPressOptions4 = new LongPressOptions();
+longPressOptions4.withDuration(Duration.ofSeconds(2)); // Set the duration of the long press
+longPressOptions4.withElement(ElementOption.element(v10)); // Set the element to long press on
+try {
+    new TouchAction((PerformsTouchActions) driver).longPress(longPressOptions4).perform();
+} catch (Exception e) {
+    e.printStackTrace();
+}
+Thread.sleep(1000);
+WebElement v11= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"));
+v11.click();
 
 	}
+
          
   
    
