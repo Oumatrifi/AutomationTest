@@ -1,3 +1,7 @@
+
+
+
+
 package tests;
 
 
@@ -312,9 +316,7 @@ public void CreationSite() {
         
         
         
-        
-        
-        
+ 
         
         //Control acc 
         
@@ -401,7 +403,6 @@ public void CreationSite() {
 	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
 	    	));
         Thread.sleep(4000);
-       
         //edit device
         WebElement c2= driver.findElement(By.xpath("//android.widget.FrameLayout[@content-desc=\"Espace\"]"));
    	    c2.click();
@@ -477,6 +478,7 @@ String filePath1 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-outp
 
 FileUtils.copyFile(screenshot1, new File(filePath1));
 Thread.sleep(1000);
+      
 //Creation sc auto for repeat
 //fleche back
 WebElement c11= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ImageView"));
@@ -574,6 +576,7 @@ Thread.sleep(2000);
 WebElement c29= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.Button"));
 c29.click();
 Thread.sleep(2000);
+       
 //edit scene auto for repeatBug
 WebElement v1= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"));
 	
@@ -614,14 +617,14 @@ int endY1 = (int) (height1 * 0.2);
 
 // Create a new TouchAction instance and perform the swipe gesture
 TouchAction action1 = new TouchAction(driver);
-action.press(PointOption.point(startX1, startY1))
+action1.press(PointOption.point(startX1, startY1))
       .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // <-- use WaitOptions.waitOptions
       .moveTo(PointOption.point(startX1, endY1))
       .release()
       .perform();
 
 WebElement v6= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button[2]"));
-c21.click();
+v6.click();
 Thread.sleep(2000);
 WebElement v7= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.widget.Button[2]"));
 v7.click();

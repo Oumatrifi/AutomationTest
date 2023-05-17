@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-17T09:20:48 CET" name="Default suite" finished-at="2023-04-17T09:24:07 CET" duration-ms="199634">
+  <suite started-at="2023-05-10T11:31:46 CET" name="Default suite" finished-at="2023-05-10T11:35:01 CET" duration-ms="194639">
     <groups>
     </groups>
-    <test started-at="2023-04-17T09:20:48 CET" name="Default test" finished-at="2023-04-17T09:24:07 CET" duration-ms="199634">
+    <test started-at="2023-05-10T11:31:46 CET" name="Default test" finished-at="2023-05-10T11:35:01 CET" duration-ms="194639">
       <class name="tests.Offline_Control_Mode">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-04-17T09:20:48 CET" name="setup" finished-at="2023-04-17T09:21:03 CET" duration-ms="15723" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-05-10T11:31:46 CET" name="setup" finished-at="2023-05-10T11:32:07 CET" duration-ms="20314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-04-17T09:21:04 CET" name="Authentification" finished-at="2023-04-17T09:21:24 CET" duration-ms="20292" status="PASS">
+        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-05-10T11:32:07 CET" name="Authentification" finished-at="2023-05-10T11:32:27 CET" duration-ms="20438" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Authentification -->
-        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-04-17T09:21:24 CET" name="CreationSite" finished-at="2023-04-17T09:21:30 CET" duration-ms="5751" status="PASS">
+        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-05-10T11:32:27 CET" name="CreationSite" finished-at="2023-05-10T11:32:33 CET" duration-ms="5872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreationSite -->
-        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-04-17T09:21:30 CET" name="Creation_Area" finished-at="2023-04-17T09:21:47 CET" duration-ms="17261" status="PASS">
+        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-05-10T11:32:33 CET" name="Creation_Area" finished-at="2023-05-10T11:32:50 CET" duration-ms="17139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Creation_Area -->
-        <test-method signature="add_Device_ControlAcc_SceneAuto_ForOnce()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-04-17T09:21:47 CET" name="add_Device_ControlAcc_SceneAuto_ForOnce" finished-at="2023-04-17T09:24:07 CET" duration-ms="140499" status="FAIL">
+        <test-method signature="add_Device_ControlAcc_SceneAuto_ForOnce()[pri:0, instance:tests.Offline_Control_Mode@1fc793c2]" started-at="2023-05-10T11:32:50 CET" name="add_Device_ControlAcc_SceneAuto_ForOnce" finished-at="2023-05-10T11:35:01 CET" duration-ms="130751" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.3', revision: 'e5e76298c3'
+Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [2dff47aa-1046-4d1b-9856-2a78f269af5b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc="Espace"]}]
-Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: android, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 2dff47aa-1046-4d1b-9856-2a78f269af5b]]>
+Command: [a0082c6b-01fa-445f-be96-1bd0e062652b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc="Espace"]}]
+Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.3', revision: 'e5e76298c3'
+Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [2dff47aa-1046-4d1b-9856-2a78f269af5b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc="Espace"]}]
-Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: android, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: 2dff47aa-1046-4d1b-9856-2a78f269af5b
+Command: [a0082c6b-01fa-445f-be96-1bd0e062652b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc="Espace"]}]
+Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -59,7 +59,7 @@ at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(Elemen
 at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at tests.Offline_Control_Mode.add_Device_ControlAcc_SceneAuto_ForOnce(Offline_Control_Mode.java:321)
+at tests.Offline_Control_Mode.add_Device_ControlAcc_SceneAuto_ForOnce(Offline_Control_Mode.java:323)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
