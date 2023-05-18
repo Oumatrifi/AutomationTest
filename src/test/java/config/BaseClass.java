@@ -69,7 +69,11 @@ public class BaseClass {
 	    //byte[] decode = Base64.getDecoder().decode(video);
 	    //FileUtils.writeByteArrayToFile(new File("video/androidclip.mp4"), decode);
 
-	        authentificationpage.verifcodepin();
+	        authentificationpage.un.click();
+	        authentificationpage.un.click();
+	        authentificationpage.un.click();
+	        authentificationpage.un.click();
+	        authentificationpage.un.click();
 
 	        }
 }
