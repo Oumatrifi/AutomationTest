@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 10 11:31:46 CET 2023</td>
+<td>Started on:</td><td>Thu May 18 16:14:07 CET 2023</td>
 </tr>
-<tr><td>Total time:</td><td>194 seconds (194639 ms)</td>
+<tr><td>Total time:</td><td>305 seconds (305011 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Offline_Control_Mode.add_Device_ControlAcc_SceneAuto_ForOnce()'><b>add_Device_ControlAcc_SceneAuto_ForOnce</b><br>Test class: tests.Offline_Control_Mode</td>
+<td title='tests.Offline_Control_Mode.Authentification()'><b>Authentification</b><br>Test class: tests.Offline_Control_Mode</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [a0082c6b-01fa-445f-be96-1bd0e062652b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc=&quot;Espace&quot;]}]
+Command: [8cd97d12-5f42-41fb-9c68-c5dd8a074691, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView[1]}]
 Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
+Session ID: 8cd97d12-5f42-41fb-9c68-c5dd8a074691
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -100,7 +100,11 @@ Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at tests.Offline_Control_Mode.add_Device_ControlAcc_SceneAuto_ForOnce(Offline_Control_Mode.java:323)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pages.AuthentificationPage.verifcodepin(AuthentificationPage.java:34)
+	at config.BaseClass.Authentification(BaseClass.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,15 +133,15 @@ Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2018545259", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2018545259'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+</pre></div><a href='#' onClick='toggleBox("stack-trace1005591041", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1005591041'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.9.1&apos;, revision: &apos;eb2032df7f&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [a0082c6b-01fa-445f-be96-1bd0e062652b, findElement {using=xpath, value=//android.widget.FrameLayout[@content-desc=&quot;Espace&quot;]}]
+Command: [8cd97d12-5f42-41fb-9c68-c5dd8a074691, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.TextView[1]}]
 Capabilities {appium:app: E:\Commendo\Commendo.apk, appium:appPackage: com.sofia.commendo, appium:databaseEnabled: false, appium:desired: {app: E:\Commendo\Commendo.apk, deviceName: HUAWEI Y7 Prime 2019, newCommandTimeout: 60, platformName: ANDROID, platformVersion: 8.1, udid: BVK6R20519013034}, appium:deviceApiLevel: 27, appium:deviceManufacturer: HUAWEI, appium:deviceModel: DUB-LX1, appium:deviceName: BVK6R20519013034, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1520, appium:deviceUDID: BVK6R20519013034, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 54, appium:takesScreenshot: true, appium:udid: BVK6R20519013034, appium:viewportRect: {height: 1386, left: 0, top: 54, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
+Session ID: 8cd97d12-5f42-41fb-9c68-c5dd8a074691
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -153,7 +157,11 @@ Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at tests.Offline_Control_Mode.add_Device_ControlAcc_SceneAuto_ForOnce(Offline_Control_Mode.java:323)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at pages.AuthentificationPage.verifcodepin(AuthentificationPage.java:34)
+	at config.BaseClass.Authentification(BaseClass.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -183,8 +191,8 @@ Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>130</td>
-<td>tests.Offline_Control_Mode@1fc793c2</td></tr>
+<td>14</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -195,20 +203,35 @@ Session ID: a0082c6b-01fa-445f-be96-1bd0e062652b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Offline_Control_Mode.CreationSite()'><b>CreationSite</b><br>Test class: tests.Offline_Control_Mode</td>
+<td title='tests.Offline_Control_Mode.edit_Device()'><b>edit_Device</b><br>Test class: tests.Offline_Control_Mode</td>
 <td></td>
-<td>5</td>
-<td>tests.Offline_Control_Mode@1fc793c2</td></tr>
+<td>52</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
 <tr>
-<td title='tests.Offline_Control_Mode.Authentification()'><b>Authentification</b><br>Test class: tests.Offline_Control_Mode</td>
+<td title='tests.Offline_Control_Mode.creationScAuto()'><b>creationScAuto</b><br>Test class: tests.Offline_Control_Mode</td>
 <td></td>
-<td>20</td>
-<td>tests.Offline_Control_Mode@1fc793c2</td></tr>
+<td>62</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
 <tr>
 <td title='tests.Offline_Control_Mode.Creation_Area()'><b>Creation_Area</b><br>Test class: tests.Offline_Control_Mode</td>
 <td></td>
-<td>17</td>
-<td>tests.Offline_Control_Mode@1fc793c2</td></tr>
+<td>15</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
+<tr>
+<td title='tests.Offline_Control_Mode.control_Acc()'><b>control_Acc</b><br>Test class: tests.Offline_Control_Mode</td>
+<td></td>
+<td>61</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
+<tr>
+<td title='tests.Offline_Control_Mode.add_Device()'><b>add_Device</b><br>Test class: tests.Offline_Control_Mode</td>
+<td></td>
+<td>90</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
+<tr>
+<td title='tests.Offline_Control_Mode.CreationSite()'><b>CreationSite</b><br>Test class: tests.Offline_Control_Mode</td>
+<td></td>
+<td>6</td>
+<td>tests.Offline_Control_Mode@28c0b664</td></tr>
 </table><p>
 </body>
 </html>

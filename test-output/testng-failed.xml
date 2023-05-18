@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.Offline_Control_Mode">
         <methods>
-          <include name="add_Device_ControlAcc_SceneAuto_ForOnce"/>
+          <include name="Authentification"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.Offline_Control_Mode -->
