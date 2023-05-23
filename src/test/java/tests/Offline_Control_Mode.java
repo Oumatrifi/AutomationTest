@@ -16,6 +16,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import config.BaseClass;
@@ -23,22 +24,25 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
-import pages.AjoutEquipementPage;
-import pages.AuthentificationPage;
-import pages.ControlAccPage;
-import pages.CreationScAutoPage;
-import pages.CréationEspacePage;
-import pages.CréationSitePage;
-import pages.EditDevicePage;
+import pageObjects.AjoutEquipementPage;
+import pageObjects.AuthentificationPage;
+import pageObjects.ControlAccPage;
+import pageObjects.CreationScAutoPage;
+import pageObjects.CréationEspacePage;
+import pageObjects.CréationSitePage;
+import pageObjects.EditDevicePage;
 import io.appium.java_client.touch.WaitOptions;
-import pages.CréationSitePage;
 
-
+import org.testng.asserts.SoftAssert;
 public class Offline_Control_Mode extends BaseClass{
 
+
+		// TODO Auto-generated constructor stub
+	public AuthentificationPage authentificationpage;
 	public CréationSitePage créationsitepage;
 	public CréationEspacePage créationespacepage;
 	public AjoutEquipementPage ajoutequipementpage;
@@ -46,9 +50,42 @@ public class Offline_Control_Mode extends BaseClass{
 	public ControlAccPage controlaccpage;
     public CreationScAutoPage creationscautopage;  
     
-        
+    @Test
+    
+    public  void Authentification() throws IOException, InterruptedException{
+    		
+    		Thread.sleep(2000);
+    	   authentificationpage = new AuthentificationPage();
+    	   PageFactory.initElements(driver, authentificationpage);
+    		// Start screen recording
+    	   
+    		//driver.startRecordingScreen(new AndroidStartScreenRecordingOptions().withVideoSize("1280x720").withTimeLimit(Duration.ofSeconds(100)));	
+    		
+    		authentificationpage.zero.click();
+    		authentificationpage.un.click();
+    		authentificationpage.deux.click();
+    		authentificationpage.trois.click();
+    		authentificationpage.quatre.click();
+    		authentificationpage.croix.click();
+    		authentificationpage.editcodepin.sendKeys("11111");
+            authentificationpage.eye.click();
+            authentificationpage.editcodepin2.sendKeys("11111");
+            authentificationpage.eye2.click();
+            driver.hideKeyboard();
+            authentificationpage.buttonEnregistrer.click();
+    //String video =driver.stopRecordingScreen();
+    //byte[] decode = Base64.getDecoder().decode(video);
+    //FileUtils.writeByteArrayToFile(new File("video/androidclip.mp4"), decode);
+
+        authentificationpage.un.click();
+        authentificationpage.un.click();
+        authentificationpage.un.click();
+        authentificationpage.un.click();
+        authentificationpage.un.click();
+
+        }
    
-@Test
+    @Test
 public void CreationSite() {
      //driver.startRecordingScreen(new AndroidStartScreenRecordingOptions()
      //        .withVideoSize("1280x720")
@@ -73,7 +110,7 @@ public void CreationSite() {
     
    
      }
-     @Test
+    @Test
     public void Creation_Area() throws InterruptedException {
     	 
     	 créationespacepage = new CréationEspacePage();
@@ -98,7 +135,7 @@ public void CreationSite() {
      }
    
 
-	@Test
+    @Test
   
      public void add_Device() throws InterruptedException, IOException {
 		
@@ -118,9 +155,9 @@ public void CreationSite() {
 		  ajoutequipementpage.suivant.click();
 		   Thread.sleep(3000);
 		   ajoutequipementpage.autoriserr.click();
-		   Thread.sleep(23000);
-		   ajoutequipementpage.choosedevice.click();
-		   Thread.sleep(10000);
+		   Thread.sleep(25000);
+		   ajoutequipementpage.choosedevice.click(); 
+		   Thread.sleep(12000);
 		   ajoutequipementpage.crayondev.click();
 		   ajoutequipementpage.editnomlampe.clear();
 		   ajoutequipementpage.editnomlampe.sendKeys("Lampe1");
@@ -129,7 +166,7 @@ public void CreationSite() {
 		   ajoutequipementpage.crayon.click();
 		   ajoutequipementpage.editmap.clear();
 		   ajoutequipementpage.editmap.sendKeys("map1");
-		   ajoutequipementpage.save.click();
+		   ajoutequipementpage.save.click(); 
 		   ajoutequipementpage.crayondevice.click();
 		   ajoutequipementpage.editlampe2.clear();
 		   ajoutequipementpage.editlampe2.sendKeys("Lampe2");
@@ -167,8 +204,7 @@ public void CreationSite() {
 	   
 		     
         
-	@Test 
-	  
+    @Test
     public void control_Acc() throws InterruptedException, IOException {
     
 		
@@ -229,7 +265,7 @@ public void CreationSite() {
      
 	}
 	
-    
+   
        
 	  
     @Test
@@ -249,11 +285,37 @@ public void CreationSite() {
 	    	creationscautopage.nouvelleauto.click();
 	    	creationscautopage.editnomsc.sendKeys("Sc Auto For Once" );
 	    	creationscautopage.reglertemps.click();
+	      	
+	
+	    	creationscautopage.clock.clear();
+	    	creationscautopage.clock.sendKeys("11");
 	    	creationscautopage.tempstext.clear();
 	    	creationscautopage.tempstext.sendKeys("59");
 	    	driver.hideKeyboard();
+	    	 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+			 String filePath = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\reglertemps.png";
+
+
+			  FileUtils.copyFile(screenshot, new File(filePath));
 	    	creationscautopage.terminé.click();
+	 
+			  
 	    	Thread.sleep(4000);
+	      	 File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+	   			 String filePath1 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\temps incorrect.png";
+
+
+	   			  FileUtils.copyFile(screenshot1, new File(filePath1));
+	    	//SoftAssert softassert = new SoftAssert();
+	    	// String expectedTitle = "une fois|11:59";
+		   //  String originalTitle = creationscautopage.clock.getText();
+		    // softassert.assertEquals(originalTitle, expectedTitle);
+		    // softassert.assertAll();
+    
+	         
+	    	 Thread.sleep(2000); 
 	    	creationscautopage.ajoutacc.click();
 	    	Thread.sleep(2000);
 	    	creationscautopage.cochlampe1.click();
@@ -330,13 +392,10 @@ Thread.sleep(2000);
 
 
 	}
-
-    
-    
     @Test
 	   
 	   public void edit_Device() throws InterruptedException, IOException {
-     
+  
 		editdevicepage = new EditDevicePage();
 		  
 		   PageFactory.initElements(driver, editdevicepage);
@@ -344,8 +403,8 @@ Thread.sleep(2000);
 		   editdevicepage.espacee.click();
 		   editdevicepage.viewespace.click();
 		   Thread.sleep(10000);
-    
-		     
+ 
+		      
 		   
 		   
 	   	 WebElement l12= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup"));
@@ -390,54 +449,16 @@ Thread.sleep(2000);
 	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
 	    	)); 
 	    editdevicepage.ajout.click();
-	    editdevicepage.reunion.click();
-	    
-	    //w ntala3 lbug (tfasakh nom du device w taaml ajouter tetaada )
-	    WebElement l33= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup"));
-	  	
-	    System.out.println(l33.getClass().getName());
-	   
-	    LongPressOptions longPressOptions3 = new LongPressOptions();
-	    longPressOptions3.withDuration(Duration.ofSeconds(2)); // Set the duration of the long press
-	    longPressOptions3.withElement(ElementOption.element(l33)); // Set the element to long press on
-	    try {
-	        new TouchAction((PerformsTouchActions) driver).longPress(longPressOptions3).perform();
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	 	Thread.sleep(2000);
- 	editdevicepage.edit.click();
- 	Thread.sleep(3000);
- 	editdevicepage.editdevicename.click();
- 	editdevicepage.editdevicename.clear();
- 	 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		 String filePath = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\device_name_empty.png";
-
-
-		  FileUtils.copyFile(screenshot, new File(filePath));
-		  
-		driver.hideKeyboard();
-
-		  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
-		    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
-		    	    + ".scrollToEnd(10)"
-		    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
-		    	)); 
-		  File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-			 String filePath1 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\ajouter_button_highlighted.png";
-
-
-			  FileUtils.copyFile(screenshot1, new File(filePath1));
-
-			   editdevicepage.ajout.click();
 		    
 		    
 		
 		
 		  
 		    Thread.sleep(2000);}
+    
+    
+
 	 		  
 	 	        
 	 	          

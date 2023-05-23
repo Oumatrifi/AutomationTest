@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 3, Time elapsed: 0.938 s <<< FAILURE! - in TestSuite
+tests.Offline_Control_Mode.CreationSite  Time elapsed: 0.053 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at tests.Offline_Control_Mode.CreationSite(Offline_Control_Mode.java:65)
+
+tests.Offline_Control_Mode.creationScAuto  Time elapsed: 0.008 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at tests.Offline_Control_Mode.creationScAuto(Offline_Control_Mode.java:245)
+
+tests.Offline_Control_Mode.edit_Device  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+	at tests.Offline_Control_Mode.edit_Device(Offline_Control_Mode.java:352)
+
