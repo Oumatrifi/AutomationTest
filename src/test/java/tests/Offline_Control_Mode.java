@@ -17,6 +17,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import config.BaseClass;
@@ -32,6 +33,7 @@ import pageObjects.AjoutEquipementPage;
 import pageObjects.AuthentificationPage;
 import pageObjects.ControlAccPage;
 import pageObjects.CreationScAutoPage;
+import pageObjects.CreationSite2Page;
 import pageObjects.CréationEspacePage;
 import pageObjects.CréationSitePage;
 import pageObjects.EditDevicePage;
@@ -39,7 +41,8 @@ import io.appium.java_client.touch.WaitOptions;
 
 import org.testng.asserts.SoftAssert;
 public class Offline_Control_Mode extends BaseClass{
-
+	  private SoftAssert softAssert;
+	  private boolean isTestFailed = false;
 
 		// TODO Auto-generated constructor stub
 	public AuthentificationPage authentificationpage;
@@ -49,7 +52,7 @@ public class Offline_Control_Mode extends BaseClass{
 	public EditDevicePage editdevicepage;
 	public ControlAccPage controlaccpage;
     public CreationScAutoPage creationscautopage;  
-    
+    public CreationSite2Page creationsite2page;
     @Test
     
     public  void Authentification() throws IOException, InterruptedException{
@@ -205,7 +208,7 @@ public void CreationSite() {
 		     
         
     @Test
-    public void control_Acc() throws InterruptedException, IOException {
+    public void control_Acc_Case1() throws InterruptedException, IOException {
     
 		
 		controlaccpage = new ControlAccPage();
@@ -282,7 +285,7 @@ public void CreationSite() {
 	       	creationscautopage.intelligent.click();
 	       	creationscautopage.automatisation.click();
 	       	Thread.sleep(1000);
-	    	creationscautopage.nouvelleauto.click();
+	    	creationscautopage.nouvelleauto.click(); 
 	    	creationscautopage.editnomsc.sendKeys("Sc Auto For Once" );
 	    	creationscautopage.reglertemps.click();
 	      	
@@ -308,14 +311,15 @@ public void CreationSite() {
 
 
 	   			  FileUtils.copyFile(screenshot1, new File(filePath1));
-	    	//SoftAssert softassert = new SoftAssert();
-	    	// String expectedTitle = "une fois|11:59";
-		   //  String originalTitle = creationscautopage.clock.getText();
-		    // softassert.assertEquals(originalTitle, expectedTitle);
-		    // softassert.assertAll();
-    
+	   			  
+	    //	SoftAssert softassert = new SoftAssert();
+	    //	String expectedTitle = "une fois|11:59";
+		 //  String originalTitle = creationscautopage.clock.getText();
+		//    softassert.assertEquals(originalTitle, expectedTitle);
+		   
+
 	         
-	    	 Thread.sleep(2000); 
+	    	 Thread.sleep(5000); 
 	    	creationscautopage.ajoutacc.click();
 	    	Thread.sleep(2000);
 	    	creationscautopage.cochlampe1.click();
@@ -401,8 +405,9 @@ Thread.sleep(2000);
 		   PageFactory.initElements(driver, editdevicepage);
 		   
 		   editdevicepage.espacee.click();
+		   Thread.sleep(2000);
 		   editdevicepage.viewespace.click();
-		   Thread.sleep(10000);
+		   Thread.sleep(5000);
  
 		      
 		   
@@ -449,15 +454,100 @@ Thread.sleep(2000);
 	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
 	    	)); 
 	    editdevicepage.ajout.click();
+	    
+	    editdevicepage.viewespace.click();
+	    Thread.sleep(2000);
+	    
+	    WebElement m= driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup"));
+	  	
+	    System.out.println(l12.getClass().getName());
+	   
+	    LongPressOptions longPressOptions3 = new LongPressOptions();
+	    longPressOptions3.withDuration(Duration.ofSeconds(2)); // Set the duration of the long press
+	    longPressOptions3.withElement(ElementOption.element(m)); // Set the element to long press on
+	    try {
+	        new TouchAction((PerformsTouchActions) driver).longPress(longPressOptions3).perform();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    
+    	Thread.sleep(2000);
+    	editdevicepage.edit.click();
+    	editdevicepage.editdevicename.clear();
+    	driver.hideKeyboard();
+  		File screenshot5 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
+			 String filePath5 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\device name empty.png";
+
+			  FileUtils.copyFile(screenshot5, new File(filePath5));
+    	  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+  	    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+  	    	    + ".scrollToEnd(10)"
+  	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
+  	    	)); 
 		    
-		    
-		
-		
-		  
+    		File screenshot6 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+ 			 String filePath6 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\ajoutbutton highlighted.png";
+
+ 			  FileUtils.copyFile(screenshot6, new File(filePath6));
+ 			  
+  	    editdevicepage.ajout.click();
+		   
 		    Thread.sleep(2000);}
     
-    
+    @Test
+    public void control_Acc_Case2() throws IOException, InterruptedException{
+    	creationsite2page = new CreationSite2Page();
+		  
+		   PageFactory.initElements(driver, creationsite2page);
+    	
+		   creationsite2page.arrowdown.click(); 
+		   creationsite2page.nouveausite.click();
+		   créationsitepage.editnomsite.sendKeys("Enetcom");
+			créationsitepage.editadress.sendKeys("sfax");
+			créationsitepage.buttonsuivant.click();
+			créationsitepage.wifi.sendKeys("TOPNET_B1D0");
+			créationsitepage.pwd.sendKeys("ylqcnui8qp");
+			créationsitepage.buttonsave.click();
+			
+			creationsite2page.enetcomsite.click();
+			Thread.sleep(3000);
+			
+    	
+			  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+			    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+			    	    + ".scrollToEnd(10)"
+			    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
+			    	));
+			  
+    	//controller favorites devices from enetcom site 
+			  
+			  creationsite2page.clicklampesite2.click();  
+				 File screenshot3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+	   			 String filePath3 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site2.png";
+
+
+	   			  FileUtils.copyFile(screenshot3, new File(filePath3));
+			  
+	   			creationsite2page.menusite2.click();
+	   			creationsite2page.flechsofia.click();
+	   		  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+			    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+			    	    + ".scrollToEnd(10)"
+			    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
+			    	));
+	   		  Thread.sleep(3000);
+	   		File screenshot4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+  			 String filePath4 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site1 etat lampe changé.png";
+
+  			  FileUtils.copyFile(screenshot4, new File(filePath4));
+  			creationsite2page.espace.click();
+  			creationsite2page.view.click();
+  			Thread.sleep(2000);
+    }
 
 	 		  
 	 	        
@@ -466,7 +556,7 @@ Thread.sleep(2000);
         
         
                 
-        
+   
         
         
         

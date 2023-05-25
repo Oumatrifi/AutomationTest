@@ -5,7 +5,8 @@
     <classes>
       <class name="tests.Offline_Control_Mode">
         <methods>
-          <include name="edit_Device"/>
+          <include name="creationScAuto"/>
+          <include name="CréationSite2"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.Offline_Control_Mode -->

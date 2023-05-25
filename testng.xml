@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="RC1">
-  <test name="V_0.11.0">
+<suite name="V_0.10.0">
+  <test name="RC1">
     <classes>
 		<class name="config.BaseClass" />
 	
