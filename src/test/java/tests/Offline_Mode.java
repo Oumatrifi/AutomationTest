@@ -295,22 +295,12 @@ public void CreationSite() {
 	    	creationscautopage.tempstext.clear();
 	    	creationscautopage.tempstext.sendKeys("59");
 	    	driver.hideKeyboard();
-	    	 File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-			 String filePath = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\reglertemps.png";
-
-
-			  FileUtils.copyFile(screenshot, new File(filePath));
+	    	
 	    	creationscautopage.terminé.click();
 	 
 			  
 	    	Thread.sleep(4000);
-	      	 File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-	   			 String filePath1 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\temps incorrect.png";
-
-
-	   			  FileUtils.copyFile(screenshot1, new File(filePath1));
+	      	
 	   			  
 	    //	SoftAssert softassert = new SoftAssert();
 	    //	String expectedTitle = "une fois|11:59";
