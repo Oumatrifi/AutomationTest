@@ -302,10 +302,7 @@ public void CreationSite() {
 	    	Thread.sleep(4000);
 	      	
 	   			  
-	    //	SoftAssert softassert = new SoftAssert();
-	    //	String expectedTitle = "une fois|11:59";
-		 //  String originalTitle = creationscautopage.clock.getText();
-		//    softassert.assertEquals(originalTitle, expectedTitle);
+	 
 		   
 
 	         
