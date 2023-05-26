@@ -4,8 +4,8 @@
     <classes>
 		<class name="config.BaseClass" />
 	
-      <class name="tests.Offline_Control_Mode" />
+      <class name="tests.Offline_Mode" />
       
     </classes>
   </test>
-</suite>
+	</suite>
