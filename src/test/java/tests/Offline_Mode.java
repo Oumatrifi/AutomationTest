@@ -201,7 +201,7 @@ public void CreationSite() {
         
 	        Thread.sleep(4000);
        
-        
+	           
 	}
 
 	   
@@ -264,15 +264,82 @@ public void CreationSite() {
     	    + ".scrollToEnd(10)"
     	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
     	));
-    Thread.sleep(2000);
-     
-	}
-	
-   
+    Thread.sleep(2000);}
+     @Test
+public void control_acc_case2() throws InterruptedException, IOException {
+		   
+    	creationsite2page = new CreationSite2Page();
+		  
+		   PageFactory.initElements(driver, creationsite2page);
+    	
+		   creationsite2page.arrowdown.click(); 
+		   creationsite2page.nouveausite.click();
+		   créationsitepage.editnomsite.sendKeys("Enetcom");
+			créationsitepage.editadress.sendKeys("sfax");
+			créationsitepage.buttonsuivant.click();
+			créationsitepage.wifi.sendKeys("TOPNET_B1D0");
+			créationsitepage.pwd.sendKeys("ylqcnui8qp");
+			créationsitepage.buttonsave.click();
+			
+			creationsite2page.enetcomsite.click();
+			Thread.sleep(3000);
+			
+    	
+			  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+			    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+			    	    + ".scrollToEnd(10)"
+			    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
+			    	));
+			  
+			  boolean isElementDisplayed = creationsite2page.element.isDisplayed();
+
+	  			try {
+	  			    assert !isElementDisplayed : "L'accessoire du site1 est affiché dans les accessoires favoris du site 2"; // Note the negation operator (!) in the assertion condition
+	  			} catch (AssertionError e) {
+	  			    System.out.println(e.getMessage());
+	  			  creationsite2page.clicklampesite2.click();  
+					 File screenshot3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		   			 String filePath3 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site2.png";
+
+
+		   			  FileUtils.copyFile(screenshot3, new File(filePath3));
+				  
+		   			creationsite2page.menusite2.click();
+		   			creationsite2page.flechsofia.click();
+		   		  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+				    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+				    	    + ".scrollToEnd(10)"
+				    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
+				    	));
+		   		  Thread.sleep(3000);
+		   		File screenshot4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+	  			 String filePath4 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site1 etat lampe changé.png";
+
+	  			  FileUtils.copyFile(screenshot4, new File(filePath4));
+	  			creationsite2page.espace.click();
+	  			creationsite2page.view.click();
+	  			Thread.sleep(2000);
+	  			creationsite2page.back.click();
+	  			
+	  			    Thread.sleep(2000);
+	  			    throw new RuntimeException("La méthode a échoué en raison de l'affichage et le controle de l'accessoire du site1 dans le site2");
+	  			}
+    	//controller favorites devices from enetcom site 
+			  
+		creation_sc_Auto();	 
+    }
+
+	 		  
+	 	        
+	 	           
+        
+         
        
 	  
     @Test
-    public void creationScAuto() throws InterruptedException, IOException{
+    public void creation_sc_Auto() throws InterruptedException, IOException{
         
 	        	  creationscautopage = new CreationScAutoPage();
 	        	  
@@ -376,6 +443,7 @@ Thread.sleep(2000);
 creationscautopage.clicklampe1.click();
 creationscautopage.clicklampe2.click();
 Thread.sleep(2000);
+
 creationscautopage.terminébutton.click();
 //Terminé
 Thread.sleep(2000);
@@ -383,6 +451,7 @@ Thread.sleep(2000);
 
 
 	}
+    
     @Test
 	   
 	   public void edit_Device() throws InterruptedException, IOException {
@@ -428,7 +497,7 @@ Thread.sleep(2000);
 	    	    + ".scrollToEnd(10)"
 	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
 	    	));   
-		 
+		  
 	    //Config la deux lampe 
 	    editdevicepage.crayedit.click();
 	    editdevicepage.editlampe4.clear();
@@ -440,8 +509,9 @@ Thread.sleep(2000);
 	    	    + ".scrollToEnd(10)"
 	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
 	    	)); 
+	    Thread.sleep(2000);
 	    editdevicepage.ajout.click();
-	    
+	    Thread.sleep(2000);
 	    editdevicepage.viewespace.click();
 	    Thread.sleep(2000);
 	    
@@ -460,6 +530,7 @@ Thread.sleep(2000);
 	    
     	Thread.sleep(2000);
     	editdevicepage.edit.click();
+    	Thread.sleep(2000);
     	editdevicepage.editdevicename.clear();
     	driver.hideKeyboard();
   		File screenshot5 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -471,80 +542,27 @@ Thread.sleep(2000);
   	    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
   	    	    + ".scrollToEnd(10)"
   	    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
-  	    	)); 
+  	    	));  
 		    
     		File screenshot6 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
  			 String filePath6 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\ajoutbutton highlighted.png";
 
  			  FileUtils.copyFile(screenshot6, new File(filePath6));
- 			  
-  	    editdevicepage.ajout.click();
-		   
-		    Thread.sleep(2000);}
+ 			 boolean isButtonEnabled = editdevicepage.ajout.isEnabled();
+
+  			try {
+  			    assert !isButtonEnabled : "Le bouton est activé."; // Note the negation operator (!) in the assertion condition
+  			} catch (AssertionError e) {
+  			    System.out.println(e.getMessage());
+
+  			    editdevicepage.ajout.click();
+  			    Thread.sleep(2000);
+  			    throw new RuntimeException("La méthode a échoué en raison de la mise en surbrillance du bouton.");
+  			}
+ 		  
+  	  }
     
-    @Test
-    public void control_Acc_Case2() throws IOException, InterruptedException{
-    	creationsite2page = new CreationSite2Page();
-		  
-		   PageFactory.initElements(driver, creationsite2page);
-    	
-		   creationsite2page.arrowdown.click(); 
-		   creationsite2page.nouveausite.click();
-		   créationsitepage.editnomsite.sendKeys("Enetcom");
-			créationsitepage.editadress.sendKeys("sfax");
-			créationsitepage.buttonsuivant.click();
-			créationsitepage.wifi.sendKeys("TOPNET_B1D0");
-			créationsitepage.pwd.sendKeys("ylqcnui8qp");
-			créationsitepage.buttonsave.click();
-			
-			creationsite2page.enetcomsite.click();
-			Thread.sleep(3000);
-			
-    	
-			  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
-			    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
-			    	    + ".scrollToEnd(10)"
-			    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
-			    	));
-			  
-    	//controller favorites devices from enetcom site 
-			  
-			  creationsite2page.clicklampesite2.click();  
-				 File screenshot3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-	   			 String filePath3 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site2.png";
-
-
-	   			  FileUtils.copyFile(screenshot3, new File(filePath3));
-			  
-	   			creationsite2page.menusite2.click();
-	   			creationsite2page.flechsofia.click();
-	   		  driver.findElement(new AppiumBy.ByAndroidUIAutomator(
-			    	    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
-			    	    + ".scrollToEnd(10)"
-			    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
-			    	));
-	   		  Thread.sleep(3000);
-	   		File screenshot4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-  			 String filePath4 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site1 etat lampe changé.png";
-
-  			  FileUtils.copyFile(screenshot4, new File(filePath4));
-  			creationsite2page.espace.click();
-  			creationsite2page.view.click();
-  			Thread.sleep(2000);
-    }
-
-	 		  
-	 	        
-	 	          
-        
-        
-        
-                
-   
-        
         
         
         
@@ -555,7 +573,6 @@ Thread.sleep(2000);
      
     
      }
-
 
 
 

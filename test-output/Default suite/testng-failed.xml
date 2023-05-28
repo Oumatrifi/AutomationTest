@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.Offline_Mode">
         <methods>
-          <include name="creation_Site"/>
+          <include name="control_Acc_Case2"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.Offline_Mode -->

@@ -6,7 +6,7 @@
       <class name="tests.Offline_Mode">
         <methods>
           <include name="edit_Device"/>
-          <include name="control_Acc_Case2"/>
+          <include name="control_acc_case2"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.Offline_Mode -->
