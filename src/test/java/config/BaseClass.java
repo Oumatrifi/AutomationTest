@@ -25,9 +25,9 @@ public class BaseClass {
 	        DesiredCapabilities caps = new DesiredCapabilities();
 	        //caps.setCapability("platformName", "ANDROID");
 	        caps.setCapability(CapabilityType.PLATFORM_NAME, "ANDROID");
-	        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1");
-	        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "HUAWEI Y7 Prime 2019");
-	        caps.setCapability(MobileCapabilityType.UDID, "BVK6R20519013034");
+	        caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
+	        caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Galaxy A03");
+	        caps.setCapability(MobileCapabilityType.UDID, "R9YT80FLLAT");
 	        caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 	        caps.setCapability(MobileCapabilityType.APP, "E:\\Commendo\\Commendo.apk");
 	       

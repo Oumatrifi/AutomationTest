@@ -9,6 +9,7 @@ package tests;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Base64;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -26,6 +27,7 @@ import io.appium.java_client.MobileBy;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidStartScreenRecordingOptions;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
@@ -60,9 +62,7 @@ public class Offline_Mode extends BaseClass{
     		Thread.sleep(2000);
     	   authentificationpage = new AuthentificationPage();
     	   PageFactory.initElements(driver, authentificationpage);
-    		// Start screen recording
-    	   
-    		//driver.startRecordingScreen(new AndroidStartScreenRecordingOptions().withVideoSize("1280x720").withTimeLimit(Duration.ofSeconds(100)));	
+    		 
     		
     		authentificationpage.zero.click();
     		authentificationpage.un.click();
@@ -76,9 +76,7 @@ public class Offline_Mode extends BaseClass{
             authentificationpage.eye2.click();
             driver.hideKeyboard();
             authentificationpage.buttonEnregistrer.click();
-    //String video =driver.stopRecordingScreen();
-    //byte[] decode = Base64.getDecoder().decode(video);
-    //FileUtils.writeByteArrayToFile(new File("video/androidclip.mp4"), decode);
+
 
         authentificationpage.un.click();
         authentificationpage.un.click();
@@ -126,12 +124,17 @@ public void CreationSite() {
     	 créationespacepage.newarea.click(); 
     	 créationespacepage.editnomarea.sendKeys("Salle de reunion"); 
     	 créationespacepage.photoespace.click();
+    	 Thread.sleep(2000);
      	 créationespacepage.galerie.click();
      	 Thread.sleep(2000);
      	créationespacepage.buttonautoriser.click();
      	créationespacepage.buttonautoriser2.click();
+        Thread.sleep(3000);
+    	créationespacepage.galery.click();
         Thread.sleep(2000);
-    	créationespacepage.choixphoto.click();
+        créationespacepage.telechargements.click();
+        Thread.sleep(2000);
+        créationespacepage.image.click();
         Thread.sleep(2000);
         créationespacepage.buttonajouter.click();
    
@@ -158,9 +161,9 @@ public void CreationSite() {
 		  ajoutequipementpage.suivant.click();
 		   Thread.sleep(3000);
 		   ajoutequipementpage.autoriserr.click();
-		   Thread.sleep(25000);
+		   Thread.sleep(2000);
 		   ajoutequipementpage.choosedevice.click(); 
-		   Thread.sleep(12000);
+		   Thread.sleep(6000);
 		   ajoutequipementpage.crayondev.click();
 		   ajoutequipementpage.editnomlampe.clear();
 		   ajoutequipementpage.editnomlampe.sendKeys("Lampe1");
@@ -256,6 +259,8 @@ public void CreationSite() {
 	    Thread.sleep(2000); 
 	    controlaccpage.flecheback.click();
 	    Thread.sleep(2000);
+		driver.startRecordingScreen(new AndroidStartScreenRecordingOptions().withVideoSize("1280x720").withTimeLimit(Duration.ofSeconds(100)));	
+
 	    controlaccpage.acceuil.click();
 	    Thread.sleep(2000);
 	    
@@ -280,7 +285,8 @@ public void control_acc_case2() throws InterruptedException, IOException {
 			créationsitepage.wifi.sendKeys("TOPNET_B1D0");
 			créationsitepage.pwd.sendKeys("ylqcnui8qp");
 			créationsitepage.buttonsave.click();
-			
+			//Start screen recording
+	    	   
 			creationsite2page.enetcomsite.click();
 			Thread.sleep(3000);
 			
@@ -298,12 +304,7 @@ public void control_acc_case2() throws InterruptedException, IOException {
 	  			} catch (AssertionError e) {
 	  			    System.out.println(e.getMessage());
 	  			  creationsite2page.clicklampesite2.click();  
-					 File screenshot3 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-		   			 String filePath3 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site2.png";
-
-
-		   			  FileUtils.copyFile(screenshot3, new File(filePath3));
+					
 				  
 		   			creationsite2page.menusite2.click();
 		   			creationsite2page.flechsofia.click();
@@ -313,14 +314,13 @@ public void control_acc_case2() throws InterruptedException, IOException {
 				    	    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/favorite_accessories_grid_view\").instance(0))"
 				    	));
 		   		  Thread.sleep(3000);
-		   		File screenshot4 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-	  			 String filePath4 = "C:\\Users\\trifi\\eclipse-workspace\\CommendoTest\\test-output\\screenshots\\favoris site1 etat lampe changé.png";
-
-	  			  FileUtils.copyFile(screenshot4, new File(filePath4));
+		   	
 	  			creationsite2page.espace.click();
 	  			creationsite2page.view.click();
 	  			Thread.sleep(2000);
+	  		    String video =driver.stopRecordingScreen();
+	  		    byte[] decode = Base64.getDecoder().decode(video);
+	  		    FileUtils.writeByteArrayToFile(new File("video/bug control acc case2.mp4"), decode);
 	  			creationsite2page.back.click();
 	  			
 	  			    Thread.sleep(2000);
@@ -381,12 +381,16 @@ public void control_acc_case2() throws InterruptedException, IOException {
 	       	creationscautopage.buttonterminé.click();
 	       	Thread.sleep(4000);
 	        
-	          driver.findElement(new AppiumBy.ByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0))"+".scrollIntoView(new UiSelector()"+".textMatches(\""+"Terminé"+"\").instance(0))"));
-
-	          Thread.sleep(2000);
+	       	driver.findElement(new AppiumBy.ByAndroidUIAutomator(
+        		    "new UiScrollable(new UiSelector().scrollable(true).instance(0))"
+        		    + ".scrollToEnd(10)"
+        		    + ".scrollIntoView(new UiSelector().resourceId(\"com.sofia.commendo:id/btn_save\").instance(0))"
+        		));
+	       	Thread.sleep(2000);
 	        	creationscautopage.clicklampe1.click();
 	        	creationscautopage.clicklampe2.click();
-	        	   Thread.sleep(5000);
+	        	
+		          Thread.sleep(2000);
         
 	        	   creationscautopage.terminébutton.click(); 
    
