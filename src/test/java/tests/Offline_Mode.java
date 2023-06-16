@@ -69,6 +69,7 @@ public class Offline_Mode extends BaseClass{
     		authentificationpage.deux.click();
     		authentificationpage.trois.click();
     		authentificationpage.quatre.click();
+    		Thread.sleep(2000);
     		authentificationpage.croix.click();
     		authentificationpage.editcodepin.sendKeys("11111");
             authentificationpage.eye.click();

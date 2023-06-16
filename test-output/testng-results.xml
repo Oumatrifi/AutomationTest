@@ -2,45 +2,45 @@
 <testng-results ignored="1" total="9" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-06T13:07:26 CET" name="V_0.10.0" finished-at="2023-06-06T13:12:27 CET" duration-ms="301314">
+  <suite started-at="2023-06-16T16:16:13 CET" name="V_0.10.0" finished-at="2023-06-16T16:21:17 CET" duration-ms="303523">
     <groups>
     </groups>
-    <test started-at="2023-06-06T13:07:26 CET" name="RC1" finished-at="2023-06-06T13:12:27 CET" duration-ms="301314">
+    <test started-at="2023-06-16T16:16:13 CET" name="RC1" finished-at="2023-06-16T16:21:17 CET" duration-ms="303523">
       <class name="config.BaseClass">
-        <test-method is-config="true" signature="setup()[pri:0, instance:config.BaseClass@313ac989]" started-at="2023-06-06T13:07:11 CET" name="setup" finished-at="2023-06-06T13:07:26 CET" duration-ms="15300" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:config.BaseClass@313ac989]" started-at="2023-06-16T16:15:47 CET" name="setup" finished-at="2023-06-16T16:16:13 CET" duration-ms="26359" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
       </class> <!-- config.BaseClass -->
       <class name="tests.Offline_Mode">
-        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:07:26 CET" name="Authentification" finished-at="2023-06-06T13:07:40 CET" duration-ms="14380" status="PASS">
+        <test-method signature="Authentification()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:16:13 CET" name="Authentification" finished-at="2023-06-16T16:16:27 CET" duration-ms="14040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Authentification -->
-        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:07:40 CET" name="CreationSite" finished-at="2023-06-06T13:07:47 CET" duration-ms="6670" status="PASS">
+        <test-method signature="CreationSite()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:16:27 CET" name="CreationSite" finished-at="2023-06-16T16:16:34 CET" duration-ms="6371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreationSite -->
-        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:07:47 CET" name="Creation_Area" finished-at="2023-06-06T13:08:08 CET" duration-ms="21320" status="PASS">
+        <test-method signature="Creation_Area()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:16:34 CET" name="Creation_Area" finished-at="2023-06-16T16:16:54 CET" duration-ms="20316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Creation_Area -->
-        <test-method signature="add_Device()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:08:08 CET" name="add_Device" finished-at="2023-06-06T13:09:10 CET" duration-ms="61282" status="PASS">
+        <test-method signature="add_Device()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:16:54 CET" name="add_Device" finished-at="2023-06-16T16:17:55 CET" duration-ms="61607" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- add_Device -->
-        <test-method signature="control_Acc_Case1()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:09:10 CET" name="control_Acc_Case1" finished-at="2023-06-06T13:10:12 CET" duration-ms="62753" status="PASS">
+        <test-method signature="control_Acc_Case1()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:17:55 CET" name="control_Acc_Case1" finished-at="2023-06-16T16:19:00 CET" duration-ms="64288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- control_Acc_Case1 -->
-        <test-method signature="control_acc_case2()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:10:12 CET" name="control_acc_case2" finished-at="2023-06-06T13:10:38 CET" duration-ms="26064" status="FAIL">
+        <test-method signature="control_acc_case2()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:19:00 CET" name="control_acc_case2" finished-at="2023-06-16T16:19:27 CET" duration-ms="27177" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[La méthode a échoué en raison de l'affichage et le controle de l'accessoire du site1 dans le site2]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: La méthode a échoué en raison de l'affichage et le controle de l'accessoire du site1 dans le site2
-at tests.Offline_Mode.control_acc_case2(Offline_Mode.java:327)
+at tests.Offline_Mode.control_acc_case2(Offline_Mode.java:328)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -75,18 +75,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- control_acc_case2 -->
-        <test-method signature="creation_sc_Auto()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:10:38 CET" name="creation_sc_Auto" finished-at="2023-06-06T13:11:42 CET" duration-ms="63484" status="PASS">
+        <test-method signature="creation_sc_Auto()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:19:27 CET" name="creation_sc_Auto" finished-at="2023-06-16T16:20:32 CET" duration-ms="64842" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creation_sc_Auto -->
-        <test-method signature="edit_Device()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-06T13:11:42 CET" name="edit_Device" finished-at="2023-06-06T13:12:27 CET" duration-ms="45302" status="FAIL">
+        <test-method signature="edit_Device()[pri:0, instance:tests.Offline_Mode@55182842]" started-at="2023-06-16T16:20:32 CET" name="edit_Device" finished-at="2023-06-16T16:21:17 CET" duration-ms="44807" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[La méthode a échoué en raison de la mise en surbrillance du bouton.]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: La méthode a échoué en raison de la mise en surbrillance du bouton.
-at tests.Offline_Mode.edit_Device(Offline_Mode.java:565)
+at tests.Offline_Mode.edit_Device(Offline_Mode.java:566)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
